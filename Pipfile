@@ -9,6 +9,7 @@ pysastrawi = "*"
 bitstring = "*"
 jupyter = "*"
 nltk = "*"
+bitarray = "*"
 
 [dev-packages]
 autopep8 = "*"
