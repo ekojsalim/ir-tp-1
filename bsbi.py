@@ -194,6 +194,8 @@ class BSBIIndex:
 
         terms = Preprocessor.preprocess(query)
 
+        terms = [self.term_id_map[word] for word in terms]
+
         with InvertedIndexReader(self.index_name, self.postings_encoding, directory=self.output_dir) as merged_index:
             if any([t not in merged_index.postings_dict for t in terms]):
                 # at least one of the term not recognized
